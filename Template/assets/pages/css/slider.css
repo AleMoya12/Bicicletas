@@ -2,7 +2,9 @@
     [Bootstrap Carousel]
 ----------------------------------------------------*/
 
+
 /* Set displays an element as in inline-level flex container */
+
 .center-block {
     position: absolute;
     top: 0;
@@ -24,7 +26,9 @@
     text-align: center;
 }
 
+
 /* Colors */
+
 .color-red {
     color: #e54a1a;
 }
@@ -33,18 +37,20 @@
     color: #e6400c;
 }
 
+
 /* Carousel */
+
 .carousel-slider .carousel-indicators li {
     border-radius: 10px !important;
 }
 
 .carousel-slider .carousel-indicators-frontend li {
     border: none;
-    background: rgba(0,0,0,.4);
+    background: rgba(0, 0, 0, .4);
 }
 
 .carousel-slider .carousel-indicators-frontend .active {
-    background: rgba(0,0,0,.6);
+    background: rgba(0, 0, 0, .6);
 }
 
 .carousel-slider .carousel-caption {
@@ -72,7 +78,7 @@
     height: 40px;
     font-size: 30px;
     color: #fff;
-    background: rgba(255,255,255,.32);
+    background: rgba(255, 255, 255, .32);
     text-shadow: none;
     padding: 5px;
 }
@@ -82,11 +88,11 @@
 }
 
 .carousel-slider .carousel-control-frontend .fa {
-    background: rgba(0,0,0,.7);
+    background: rgba(0, 0, 0, .7);
 }
 
 .carousel-slider .carousel-control-frontend .fa:hover {
-    background: rgba(0,0,0,.9);
+    background: rgba(0, 0, 0, .9);
 }
 
 .carousel-slider .item {
@@ -95,9 +101,11 @@
     min-height: 580px;
 }
 
+
 /* Carousel Item Background Images */
+
 .carousel-slider .carousel-item-one {
-    background: url(../../../assets/onepage/img/slider/slide1.jpg);
+    background: url(../../../assets/onepage/img/slider/.jpg);
     background-size: cover;
     background-position: center center;
 }
@@ -115,24 +123,24 @@
 }
 
 .carousel-slider .carousel-item-four {
-    background: url(../../../assets/pages/img/shop-slider/slide1/bg.jpg);
+    background: url(../../../img/9.jpg);
     background-size: cover;
     background-position: center center;
 }
 
 .carousel-slider .carousel-item-five {
-    background: url(../../../assets/pages/img/shop-slider/slide2/bg.jpg);
+    background: url(../../../img/9.jpg);
     background-size: cover;
 }
 
 .carousel-slider .carousel-item-six {
-    background: url(../../../assets/pages/img/shop-slider/slide3/bg.jpg);
+    background: url(../../../img/9.jpg);
     background-size: cover;
     background-position: center center;
 }
 
 .carousel-slider .carousel-item-seven {
-    background: url(../../../assets/pages/img/shop-slider/slide4/bg.jpg);
+    background: url(../../../img/9.jpg);
     background-size: cover;
     background-position: center center;
 }
@@ -155,7 +163,9 @@
     background-position: center center;
 }
 
+
 /* Carousel Titles */
+
 .carousel-slider .carousel-title-v1 {
     font-size: 75px;
     font-weight: 600;
@@ -206,7 +216,9 @@
     font-weight: normal;
 }
 
+
 /* Carousel Subtitles */
+
 .carousel-slider .carousel-subtitle-v1 {
     display: block;
     font-size: 25px;
@@ -261,7 +273,9 @@
     color: #7b8793;
 }
 
+
 /* Carousel Btn */
+
 .carousel-slider .carousel-btn {
     display: inline-block;
     font-size: 18px;
@@ -276,7 +290,9 @@
     text-decoration: none;
 }
 
+
 /* Carousel Btn Green */
+
 .carousel-slider .carousel-btn-green {
     display: inline-block;
     font-size: 13px;
@@ -290,7 +306,9 @@
     text-decoration: none;
 }
 
+
 /* Carousel Btn Green */
+
 .carousel-slider .carousel-btn-red {
     display: inline-block;
     font-size: 13px;
@@ -304,7 +322,9 @@
     text-decoration: none;
 }
 
+
 /* Border Bottom Title */
+
 .border-bottom-title {
     position: relative;
 }
@@ -320,14 +340,18 @@
     text-align: center;
 }
 
+
 /* Border Top & Bottom */
+
 .border-top-bottom {
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     padding: 3px 0;
 }
 
+
 /* Carousel Positions */
+
 .carousel-slider .carousel-position-one {
     position: absolute;
     top: 10%;
@@ -364,12 +388,16 @@
     left: auto;
 }
 
+
 /* Carousel Animation Delay */
+
 .carousel-slider .carousel-caption .animate-delay {
     animation-delay: 1s;
 }
 
+
 /* Carousel Promo Like */
+
 .carousel-slider .promo-like {
     position: relative;
     top: -23px;
@@ -379,7 +407,7 @@
     font-size: 80px;
     line-height: 1;
     color: #fff;
-    background: rgba(0,0,0,.67);
+    background: rgba(0, 0, 0, .67);
     margin-right: 7px;
     padding: 28px;
 }
@@ -389,7 +417,7 @@
     text-align: left;
     display: inline-block;
     font: 400 20px/1.4 "PT Sans Narrow", Arial, sans-serif;
-    background: rgba(0,0,0,0.67);
+    background: rgba(0, 0, 0, 0.67);
     padding: 25px;
 }
 
@@ -402,41 +430,36 @@
     margin: 0;
 }
 
+
 /* Stylesheet design for under max-width: 992px */
-@media (max-width: 991px) {            /* 992px */
+
+@media (max-width: 991px) {
+    /* 992px */
     .carousel-slider .carousel-title-v1 {
         font-size: 50px;
     }
-
     .carousel-slider .carousel-title-v2 {
         font-size: 35px;
     }
-
     .carousel-slider .carousel-title-v3 {
         font-size: 40px;
     }
-
     .carousel-slider .carousel-title-v4 {
         font-size: 60px;
     }
-
     /* Carousel Subtitles */
     .carousel-slider .carousel-subtitle-v1 {
         font-size: 18px;
     }
-
     .carousel-slider .carousel-subtitle-v2 {
         font-size: 18px;
     }
-
     .carousel-slider .carousel-subtitle-v3 {
         font-size: 30px;
     }
-
     .carousel-slider .carousel-subtitle-v4 {
         font-size: 30px;
     }
-
     /* Carousel Promo Like */
     .carousel-slider .promo-like {
         top: -24px;
@@ -445,15 +468,12 @@
         font-size: 60px;
         padding: 25px;
     }
-
     .carousel-slider .promo-like-text {
         padding: 15px;
     }
-
     .carousel-slider .promo-like-text h2 {
         font-size: 25px;
     }
-
     .carousel-slider .promo-like-text p {
         font-size: 16px;
     }
