@@ -27,6 +27,13 @@ $(document).ready(function () {
             for (const bici of listaDatos) {
                 $(contenedorProduct).append(crearElemento(bici));
             }
+             //DETECTAR EVENTOS DE VER
+             let botones = document.getElementsByClassName("btnVer");
+             console.log(botones);
+             for (const boton of botones) {
+                 boton.onclick = manejadorVista;
+             }
+            
         }
     }
     );
@@ -47,7 +54,7 @@ function crearElemento(dato) {
                     <img src="${dato.img}" class="img-responsive" alt="${dato.nombre}">
                     <div>
                         <a href="${dato.img}" class="btn btn-default fancybox-button">Zoom</a>
-                        <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
+                        <a href="#product-pop-up" class="btn btn-default fancybox-fast-view" id="${dato.id}" class="btnVer">View</a>
                     </div>
                   </div>
                   <h3><a href="shop-item.html">${dato.nombre}</a></h3>
@@ -57,6 +64,83 @@ function crearElemento(dato) {
                `;
     //agrego cada nodo creado al padre
     contenedorProduct.appendChild(nuevoElemento);
+    
+    
 }
+//EVENTO AL HACER CLICK A VER
+let productPopUp = document.getElementById("product-pop-up");
+function manejadorVista(evento) {
+    //determino el id del seleccionado
+    //let seleccionado = evento.target.id;
+    let seleccionado = listaDatos.find(objeto => objeto.id == evento.target.id);
+    console.log(seleccionado);
+    
+    let nuevaVista = document.createElement("div");
+    nuevaVista.classList.add("product-page");
+    nuevaVista.classList.add("product-pop-up");
+    
+    
+    nuevaVista.innerHTML  = `
+    <div class="product-page product-pop-up">
+    <div class="row">
+      <div class="col-md-6 col-sm-6 col-xs-3">
+        <div class="product-main-image">
+          <img src="${seleccionado.img}" alt="${seleccionado.nombre}" class="img-responsive">
+        </div>
+        <div class="product-other-images">
+          <a href="javascript:;" class="active"><img alt="${seleccionado.nombre}" src="${seleccionado.img}"></a>
+          <a href="javascript:;"><img alt="${seleccionado.nombre}" src="${seleccionado.img}"></a>
+          <a href="javascript:;"><img alt="${seleccionado.nombre}" src="${seleccionado.img}"></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-9">
+        <h1>${seleccionado.nombre}</h1>
+        <div class="price-availability-block clearfix">
+          <div class="price">
+            <strong><span>$</span>${seleccionado.precio}</strong>
+            <em>$<span>62.00</span></em>
+          </div>
+          <div class="availability">
+            Availability: <strong>In Stock</strong>
+          </div>
+        </div>
+        <div class="description">
+          <p>Lorem ipsum dolor ut sit ame dolore  adipiscing elit, sed nonumy nibh sed euismod laoreet dolore magna aliquarm erat volutpat 
+Nostrud duis molestie at dolore.</p>
+        </div>
+        <div class="product-page-options">
+          <div class="pull-left">
+            <label class="control-label">Size:</label>
+            <select class="form-control input-sm">
+              <option>L</option>
+              <option>M</option>
+              <option>XL</option>
+            </select>
+          </div>
+          <div class="pull-left">
+            <label class="control-label">Color:</label>
+            <select class="form-control input-sm">
+              <option>Red</option>
+              <option>Blue</option>
+              <option>Black</option>
+            </select>
+          </div>
+        </div>
+        <div class="product-page-cart">
+          <div class="product-quantity">
+              <input id="product-quantity" type="text" value="1" readonly name="product-quantity" class="form-control input-sm">
+          </div>
+          <button class="btn btn-primary" type="submit">Add to cart</button>
+          <a href="shop-item.html" class="btn btn-default">More details</a>
+        </div>
+      </div>
 
+      <div class="sticker sticker-sale"></div>
+    </div>
+  </div>
+    `;
+
+    productPopUp.appendChild(nuevaVista);
+
+};
 
