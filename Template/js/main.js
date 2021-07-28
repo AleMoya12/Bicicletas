@@ -33,7 +33,15 @@ $(document).ready(function () {
              for (const boton of botones) {
                  boton.onclick = manejadorVista;
              }
-            
+
+            if ($("#ordenar > option[value=3]").attr("selected", true)) {
+              let ordPrecioMenor = listaDatos.sort((precioUno, precioDos) => precioUno.precio - precioDos.precio);
+              console.log(ordPrecioMenor);
+              
+              for (const bici of ordPrecioMenor) {
+                $(contenedorProduct).append(crearElemento(bici));
+            }
+            };
         }
     }
     );
@@ -42,6 +50,7 @@ $(document).ready(function () {
 
 //funcion para crear en elemento del DOM
 function crearElemento(dato) {
+ 
     let nuevoElemento = document.createElement("div");
     nuevoElemento.classList.add("col-md-4");
     nuevoElemento.classList.add("col-sm-6");
@@ -54,7 +63,7 @@ function crearElemento(dato) {
                     <img src="${dato.img}" class="img-responsive" alt="${dato.nombre}">
                     <div>
                         <a href="${dato.img}" class="btn btn-default fancybox-button">Zoom</a>
-                        <a href="#product-pop-up" class="btn btn-default fancybox-fast-view" id="${dato.id}" class="btnVer">View</a>
+                        <a href="#product-pop-up" class="btn btn-default fancybox-fast-view" ><button id="${dato.id}" class="btnVer" style="background: transparent; border: none; outline: none">View</button></a>
                     </div>
                   </div>
                   <h3><a href="shop-item.html">${dato.nombre}</a></h3>
@@ -74,7 +83,7 @@ function manejadorVista(evento) {
     //let seleccionado = evento.target.id;
     let seleccionado = listaDatos.find(objeto => objeto.id == evento.target.id);
     console.log(seleccionado);
-    
+    productPopUp.innerHTML = "";
     let nuevaVista = document.createElement("div");
     nuevaVista.classList.add("product-page");
     nuevaVista.classList.add("product-pop-up");
